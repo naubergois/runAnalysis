@@ -13,7 +13,7 @@ ytest <- read.table("y_test.txt")
 Y <- rbind(ytrain, ytest)
 
 features <- read.table("features.txt")
-
+featuresvector<-as.character(features[,2])
 #Extracts only the measurements on the mean and standard deviation for each measurement.
 
 indexstd<-grep(glob2rx("*-std*"), featuresvector, value=TRUE)
