@@ -35,7 +35,7 @@ result <- cbind(S, Y, X)
 
 #Appropriately labels the data set with descriptive variable names.
 names(result)[1:2]<-c("subject", "activity")
-names(result)[3:563]<-as.character(features$V2)
+names(result)[3:81]<-as.character(features$V2[c(featureindex$V1)])
 
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 labels<-colnames(result)[-c(1,2)]
